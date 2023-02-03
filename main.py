@@ -1,7 +1,17 @@
 import fastapi
 import uvicorn
+from dotenv import find_dotenv, load_dotenv
+load_dotenv(find_dotenv())
+import os
+email = os.getenv("email")
+print(f"email: {email}")
+password = os.getenv("password")
+print(f'password: {password}')
+#def send_mail(to, token, username, email=email, password=password):
+
 
 from views import home, weather_api
+
 
 api = fastapi.FastAPI()
 
@@ -25,3 +35,4 @@ if __name__ == "__main__":
 # @app.get("/hello/{name}")
 # async def say_hello(name: str):
 #   return {"message": f"Hello {name}"}
+
