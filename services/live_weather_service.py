@@ -1,4 +1,5 @@
 import httpx
+
 from models.location import Location
 
 
