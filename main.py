@@ -4,9 +4,9 @@ from dotenv import find_dotenv, load_dotenv
 load_dotenv(find_dotenv())
 import os
 email = os.getenv("email")
-print(f"email: {email}")
-password = os.getenv("password")
-print(f'password: {password}')
+#print(f"email: {email}")
+password = os.getenv("email_password")
+#print(f'password: {password}')
 #def send_mail(to, token, username, email=email, password=password):
 
 
