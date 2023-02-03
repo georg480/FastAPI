@@ -12,6 +12,12 @@ password = os.getenv("email_password")
 # def send_mail(to, token, username, email=email, password=password):
 
 
+def add(a, b):
+    return a + b
+
+
+print(add(5, 6))
+
 from views import home, weather_api
 
 api = fastapi.FastAPI()
