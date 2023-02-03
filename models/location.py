@@ -4,6 +4,6 @@ from pydantic import BaseModel
 
 
 class Location(BaseModel):
-    city: str
+    city: str = 'sonsbeck'
     state: Optional[str] = None
-    country = "ge"
+    country = "DE"
