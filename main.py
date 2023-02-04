@@ -1,4 +1,5 @@
 from random import randint
+from costumlogging import logging_config
 
 import fastapi
 import uvicorn
@@ -69,7 +70,7 @@ def configure():
 configure()
 
 if __name__ == "__main__":
-    uvicorn.run(api, port=88)
+    uvicorn.run(api, port=88, log_config=logging_config)
 
 
 # @app.get("/")
