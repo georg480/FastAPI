@@ -15,8 +15,12 @@ password = os.getenv("email_password")
 def add(a, b):
     return a + b
 
+def devide(a :int, b: int):
+    return (a / b)
 
 print(add(5, 6))
+
+print(devide(8, 2))
 
 from views import home, weather_api
 
