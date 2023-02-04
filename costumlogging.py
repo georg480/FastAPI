@@ -1,12 +1,13 @@
+import getpass
 import json
 import logging
-import getpass
 
 
 class UserFilter(logging.Filter):
     def filter(self, record: logging.LogRecord) -> bool:
         setattr(record, "user", getpass.getuser())
         return True
+
 
 class NoBadWordsFilter(logging.Filter):
     def filter(self, record: logging.LogRecord) -> bool:
@@ -27,13 +28,17 @@ class CustomFormatter(logging.Formatter):
             "funcName": record.funcName,
             "lineNumber": record.lineno,
             "threadId": record.thread,
-            "user": record.user
+            "user": record.user,
         }
         return json.dumps(log_record)
 
+
 logging_config: dict = {
     "version": 1,
-    "filters": {"user": {"()": lambda: UserFilter()}, "badwords": {"()": lambda: UserFilter()}},
+    "filters": {
+        "user": {"()": lambda: UserFilter()},
+        "badwords": {"()": lambda: UserFilter()},
+    },
     "formatters": {
         "myformatter": {
             "()": lambda: CustomFormatter(),
@@ -50,7 +55,6 @@ logging_config: dict = {
         "handlers": ["console"],
         "level": "INFO",
         "propagate": False,
-
     },
     "loggers": {
         "uvicorn.access": {

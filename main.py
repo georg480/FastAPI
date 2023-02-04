@@ -1,9 +1,10 @@
 from random import randint
-from costumlogging import logging_config
 
 import fastapi
 import uvicorn
 from dotenv import find_dotenv, load_dotenv
+
+from costumlogging import logging_config
 
 load_dotenv(find_dotenv())
 import os
@@ -47,8 +48,6 @@ def printme():
     print("Hallo")
 
 
-
-
 def is_not_flat(data):
     return any(isinstance(i, list) for i in data)
 
@@ -81,4 +80,3 @@ if __name__ == "__main__":
 # @app.get("/hello/{name}")
 # async def say_hello(name: str):
 #   return {"message": f"Hello {name}"}
-

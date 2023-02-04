@@ -2,9 +2,16 @@ from unittest import mock
 
 import pytest
 
-from main import ProductionClass, add, devide, play_random, printme, is_not_flat, sum_list
-
 from conftest import my_data
+from main import (
+    ProductionClass,
+    add,
+    devide,
+    is_not_flat,
+    play_random,
+    printme,
+    sum_list,
+)
 
 
 @pytest.mark.parametrize("input1, input2, expected", [(2, 3, 5), (1, 4, 5)])
@@ -40,11 +47,13 @@ def test_printme(capsys):
 
 
 def test_is_not_flat(my_data):
-  assert is_not_flat(my_data) == False
+    assert is_not_flat(my_data) == False
 
 
 def test_sum_list(my_data):
     assert sum_list(my_data) == 10
+
+
 ##
 
 
