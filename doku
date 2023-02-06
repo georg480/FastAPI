@@ -2,6 +2,22 @@ https://copyassignment.com/python-docstring-generator-pycharm-and-vscode/
 https://www.jetbrains.com/pycharm/guide/tutorials/sphinx_sites/setup/
 https://www.jetbrains.com/pycharm/guide/tutorials/sphinx_sites/documentation/
 https://betterprogramming.pub/auto-documenting-a-python-project-using-sphinx-8878f9ddc6e9
+https://docs.locust.io/en/latest/what-is-locust.html
+
+
+locust -f ./locusttest.py
+0.0.0. auf localhost: ändern und Anzahl der Benutzer (Spitzenparallelität)
+    1000
+
+                                 Spawn-Rate (Benutzer gestartet/Sekunde)
+                                 50
+
+                                 Host (z.B. http://www.example.com)
+                                 http://127.0.0.1:88
+
+                                 Erweiterte Optionen
+                                 Laufzeit (z.B. 20, 20s, 3m, 2h, 1h20m, 3h30m10s, etc.)
+                                 20
 
 python ./run_livereload.py
 isort .

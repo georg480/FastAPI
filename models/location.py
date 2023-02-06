@@ -21,6 +21,7 @@ class Location(BaseModel):
         Numeric error code.
 
     """
+
     city: str = "sonsbeck"
     state: Optional[str] = None
     country = "DE"

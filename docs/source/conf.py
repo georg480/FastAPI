@@ -13,23 +13,24 @@ release = "0.0.1"
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
-import os
-import sys
-#sys.path.insert(0, os.path.abspath("../../"))
+# import os
+
+# sys.path.insert(0, os.path.abspath("../../"))
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here.
 import pathlib
 import sys
+
 sys.path.insert(0, pathlib.Path(__file__).parents[2].resolve().as_posix())
 
-extensions = ['sphinx.ext.autodoc', 'sphinx.ext.napoleon']
-#extensions = ["sphinx.ext.autodoc",
- #             "sphinx.ext.napoleon",
-  #            ]
-#extensions = [
- #   'sphinx.ext.duration',
-  #  'sphinx.ext.doctest',#'sphinxcontrib.napoleon',
-#]
+extensions = ["sphinx.ext.autodoc", "sphinx.ext.napoleon"]
+# extensions = ["sphinx.ext.autodoc",
+#             "sphinx.ext.napoleon",
+#            ]
+# extensions = [
+#   'sphinx.ext.duration',
+#  'sphinx.ext.doctest',#'sphinxcontrib.napoleon',
+# ]
 
 templates_path = ["_templates"]
 
@@ -49,12 +50,12 @@ napoleon_preprocess_types = False
 napoleon_type_aliases = None
 napoleon_attr_annotations = True
 
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', '.venv']
+exclude_patterns = ["_build", "Thumbs.db", ".DS_Store", ".venv"]
 
 # language = 'de'
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-html_theme = 'sphinx_rtd_theme' #"alabaster"
+html_theme = "sphinx_rtd_theme"  # "alabaster"
 html_static_path = ["_static"]
