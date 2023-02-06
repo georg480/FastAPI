@@ -7,8 +7,20 @@ class Quickstart(HttpUser):
 
     @task
     def test_root(self):
+        """test root erstellen
+
+        Return
+        -------
+        object
+        """
         self.client.get("/")
 
     @task
     def test_hello(self):
+        """test hello erstellen
+
+        Return
+        -------
+        object
+        """
         self.client.get("/hallo")

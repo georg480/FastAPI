@@ -11,6 +11,12 @@ class UserFilter(logging.Filter):
 
 class NoBadWordsFilter(logging.Filter):
     def filter(self, record: logging.LogRecord) -> bool:
+        """für uvicorn filter
+
+        Return
+        -------
+        object
+        """
         return not record.getMessage().__contains__("f")
 
 
@@ -19,6 +25,12 @@ class CustomFormatter(logging.Formatter):
         super().__init__()
 
     def formatMessage(self, record: logging.LogRecord) -> str:
+        """für das uvicorn Protokoll
+
+        Return
+        -------
+        object
+        """
         super().formatMessage(record)
         log_record = {
             "message": record.message,

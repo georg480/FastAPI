@@ -1,4 +1,11 @@
+https://copyassignment.com/python-docstring-generator-pycharm-and-vscode/
+https://www.jetbrains.com/pycharm/guide/tutorials/sphinx_sites/setup/
+https://www.jetbrains.com/pycharm/guide/tutorials/sphinx_sites/documentation/
+https://betterprogramming.pub/auto-documenting-a-python-project-using-sphinx-8878f9ddc6e9
+
+python ./run_livereload.py
 isort .
 black .
 pytest
-mypy?
+mypy
+pylint xxx.py

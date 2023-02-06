@@ -1,7 +1,4 @@
-from typing import Optional
-
 import fastapi
-import httpx
 
 from models.location import Location
 from models.umbrella_status import UmbrellaStatus
@@ -12,6 +9,12 @@ router = fastapi.APIRouter()
 
 @router.get("/api/umbrella", response_model=UmbrellaStatus)
 async def do_i_need_an_umbrella(location: Location = fastapi.Depends()):
+    """Anfrage an weather händlen
+
+    Return: Wetter
+    -------
+    object
+    """
     #    https: // weather.talkpython.fm / api / weather?city = portland & state = OR & country = US & units = imperial
     # url = "https://weather.talkpython.fm/api/weather?city=portland&state=OR&country=US&units=imperial"
     data = await live_weather_service.get_live_report(location)

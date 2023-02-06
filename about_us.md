@@ -1,0 +1,1 @@
+As we can see in [our Python class](my_demo.MyDemo), Python is fun!

@@ -1,3 +1,4 @@
+import os
 from random import randint
 
 import fastapi
@@ -5,9 +6,9 @@ import uvicorn
 from dotenv import find_dotenv, load_dotenv
 
 from costumlogging import logging_config
+from views import home, weather_api
 
 load_dotenv(find_dotenv())
-import os
 
 email = os.getenv("email")
 # print(f"email: {email}")
@@ -55,8 +56,6 @@ def is_not_flat(data):
 def sum_list(data):
     return sum(data)
 
-
-from views import home, weather_api
 
 api = fastapi.FastAPI()
 

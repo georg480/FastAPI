@@ -4,6 +4,10 @@ from models.location import Location
 
 
 async def get_live_report(location: Location):
+    """erzeugt die Wetterdaten
+
+    Return: Wetter
+    """
     url = f"https://weather.talkpython.fm/api/weather?city={location.city}&country={location.country}"
     if location.state:
         url += f"&state={location.state}"
